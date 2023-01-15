@@ -32,3 +32,15 @@ background-color: #ffff64;
 grid-area: foot;
 background-color: #8cffa0;
 }
+
+@media only screen and (max-width: 600px) {
+    #page {
+        grid-template-areas:
+        "head"
+        "nav "
+        "main"
+        "foot";
+      grid-template-rows: 5rem auto 1fr 30px;
+      grid-template-columns: 100%;
+    }
+  }

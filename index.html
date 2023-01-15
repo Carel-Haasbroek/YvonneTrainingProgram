@@ -18,25 +18,132 @@
             <h3 style="text-align: center;">Some extra stuff</h3>
             <ol>
                 <li>
-                    Some item
+                    Remember, to achieve weight loss while training hard, you either need to train more or eat less. Not both.
+                </li>
+                <li>
+                    Don't rest less than 2 min. Rest is just as important as the volume of training.
+                </li>
+                <li>
+                    Sets/reps format is Sets x Reps. Meaning that 3x4 means 3 sets of 4 reps.
                 </li>
             </ol>
+            <div>
+                <div>
+                    <p id="quote">
+
+                    </p>
+                    <p id="author">
+
+                    </p>
+                    <img id="quoteimage" src="" alt="">
+                </div>
+                <script>
+                    let api = 'https://zenquotes.io/api/today'
+
+                    let cb = function(data){
+                        $('#quote').text(data.q)
+                    }
+
+                    $( document ).ready(function() {
+                        $.ajax({
+                        url: api,
+                        contentType: "application/json",
+                        dataType: 'json',
+                        success: cb
+                    })
+                    });
+                </script>
+            </div>
         </nav>
 
         <main id="main">
             <section>
-                <ol>
+
+            </section>
+            <section id="trainingdays">
+                <ul>
                     <li>
                         <p>
-                            Boxing:
+                            <b>Morning Exercises</b>:
                         </p>
                         <p>
-                            2x 5 min jump rope
-                            10 min boxing against bag
-                            10 min treadmill
+                            These exercises should <b>not</b> take a lot of energy or time. The goal of these is to help condition the body for more intense
+                            training down the line. The athlete should still have energy for the day and afternoon training after this.
+                        </p>
+                        <p>
+                            3x 3 min jump rope <br>
+                            20x bridge <br>
+                            20x shrimp <br>
+                            (best time to drill basics, include other drills you do with your jitz class) <br>
+                            2x 2 min plank. if you cant make the whole time, rest 10-20 secs then try again as the timer tics. <br>
+                            2x 2 min bicycle crunch <br>
+                            2x 2 min russian twists. one each side <br>
+                            <br>
+                            Bench mark exercises: <br>
+                            Pushups till collapse <br>
+                            Situps till collapse <br>
+                            The goal of these are to track your improvement as you go on in the year. The ultimate goal is a really big number where its no longer an exercise but a formality.
+                            You will begin strong, then dip for a few weeks (2-4), and only then should you see consistent improvement.
                         </p>
                     </li>
-                </ol>
+                    <li>
+                        <p>
+                           <b>Boxing day</b>:
+                        </p>
+                        <p>
+                            2x 5 min jump rope <br>
+                            10 min boxing against bag <br>
+                            10 min treadmill <br>
+                            *include some tai bo stuff here* <br>
+                            <br>
+                            2-5 min rest in between
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Running/Cardio/Some word i don't have yet day</b>:
+                        </p>
+                        <p>
+                            *include swimming here?* <br>
+                            *Jitz specific stuff* <br>
+                            *bodyweight exercises here* <br>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Strength Day</b>:
+                        </p>
+                        <p>
+                            10 min treadmill/bicycle <br>
+                            <ul>
+                                <b>Do one every week and the other every other week</b>
+                                <li>
+                                    5x5 dead lifts @ 20-40% bodyweight (one of the best exercises to build static strength)<br>
+                                </li>
+                                <li>
+                                    5x5 cleans @ 10-20% bodyweight (one of the best exercises to build static strength)<br>
+                                </li>
+                                <b>Also note, these are LOW weights</b> Build up strength and technique for the first 6 month, and only then increase in weight.
+                            </ul>
+                            5 min rows <br>
+                            3x8 Pull downs (on any weight you feel comfortable with. eventually these must become pull ups) <br>
+                            <b>NOTE: ALL these exercises pulls on your back, so pay CLOSE attention to your posture while doing these</b>
+                            <br>
+                            2-5 min rest in between
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Stretches</b>:
+                        </p>
+                        <p>
+                            After <b>EVERY</b> exercise<br>
+
+                        </p>
+                    </li>
+                    
+                </ul>
+
             </section>
         </main>
 
