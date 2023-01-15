@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
+
 <body>
     <section id="page">
         <header>
@@ -18,7 +20,8 @@
             <h3 style="text-align: center;">Some extra stuff</h3>
             <ol>
                 <li>
-                    Remember, to achieve weight loss while training hard, you either need to train more or eat less. Not both.
+                    Remember, to achieve weight loss while training hard, you either need to train more or eat less. Not
+                    both.
                 </li>
                 <li>
                     Don't rest less than 2 min. Rest is just as important as the volume of training.
@@ -28,29 +31,32 @@
                 </li>
             </ol>
             <div>
-                <div>
+                <div style="width: 90%;margin-inline: auto;">
+                    <h4 style="text-align: center;">Some random quote from somewhere</h4>
                     <p id="quote">
 
                     </p>
                     <p id="author">
 
                     </p>
-                    <img id="quoteimage" src="" alt="">
                 </div>
                 <script>
-                    let api = 'https://zenquotes.io/api/today'
+                    $(document).ready(async function () {
+                        const settings = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url": "https://type.fit/api/quotes",
+                        "method": "GET"
+                        }
 
-                    let cb = function(data){
-                        $('#quote').text(data.q)
-                    }
+                        $.ajax(settings).done(function (response) {
+                            const data = JSON.parse(response);
+                            //get random one
+                            let number = Math.floor(Math.random() * (data.length - 1) ) + 1;
 
-                    $( document ).ready(function() {
-                        $.ajax({
-                        url: api,
-                        contentType: "application/json",
-                        dataType: 'json',
-                        success: cb
-                    })
+                            $('#quote').text(data[number].text)
+                            $('#author').text(data[number].author)
+                        });
                     });
                 </script>
             </div>
@@ -67,28 +73,33 @@
                             <b>Morning Exercises</b>:
                         </p>
                         <p>
-                            These exercises should <b>not</b> take a lot of energy or time. The goal of these is to help condition the body for more intense
-                            training down the line. The athlete should still have energy for the day and afternoon training after this.
+                            These exercises should <b>not</b> take a lot of energy or time. The goal of these is to help
+                            condition the body for more intense
+                            training down the line. The athlete should still have energy for the day and afternoon
+                            training after this.
                         </p>
                         <p>
                             3x 3 min jump rope <br>
                             20x bridge <br>
                             20x shrimp <br>
                             (best time to drill basics, include other drills you do with your jitz class) <br>
-                            2x 2 min plank. if you cant make the whole time, rest 10-20 secs then try again as the timer tics. <br>
+                            2x 2 min plank. if you cant make the whole time, rest 10-20 secs then try again as the timer
+                            tics. <br>
                             2x 2 min bicycle crunch <br>
                             2x 2 min russian twists. one each side <br>
                             <br>
                             Bench mark exercises: <br>
                             Pushups till collapse <br>
                             Situps till collapse <br>
-                            The goal of these are to track your improvement as you go on in the year. The ultimate goal is a really big number where its no longer an exercise but a formality.
-                            You will begin strong, then dip for a few weeks (2-4), and only then should you see consistent improvement.
+                            The goal of these are to track your improvement as you go on in the year. The ultimate goal
+                            is a really big number where its no longer an exercise but a formality.
+                            You will begin strong, then dip for a few weeks (2-4), and only then should you see
+                            consistent improvement.
                         </p>
                     </li>
                     <li>
                         <p>
-                           <b>Boxing day</b>:
+                            <b>Boxing day</b>:
                         </p>
                         <p>
                             2x 5 min jump rope <br>
@@ -115,21 +126,25 @@
                         </p>
                         <p>
                             10 min treadmill/bicycle <br>
-                            <ul>
-                                <b>Do one every week and the other every other week</b>
-                                <li>
-                                    5x5 dead lifts @ 20-40% bodyweight (one of the best exercises to build static strength)<br>
-                                </li>
-                                <li>
-                                    5x5 cleans @ 10-20% bodyweight (one of the best exercises to build static strength)<br>
-                                </li>
-                                <b>Also note, these are LOW weights</b> Build up strength and technique for the first 6 month, and only then increase in weight.
-                            </ul>
-                            5 min rows <br>
-                            3x8 Pull downs (on any weight you feel comfortable with. eventually these must become pull ups) <br>
-                            <b>NOTE: ALL these exercises pulls on your back, so pay CLOSE attention to your posture while doing these</b>
-                            <br>
-                            2-5 min rest in between
+                        <ul>
+                            <b>Do one every week and the other every other week</b>
+                            <li>
+                                5x5 dead lifts @ 20-40% bodyweight (one of the best exercises to build static
+                                strength)<br>
+                            </li>
+                            <li>
+                                5x5 cleans @ 10-20% bodyweight (one of the best exercises to build static strength)<br>
+                            </li>
+                            <b>Also note, these are LOW weights</b> Build up strength and technique for the first 6
+                            month, and only then increase in weight.
+                        </ul>
+                        5 min rows <br>
+                        3x8 Pull downs (on any weight you feel comfortable with. eventually these must become pull ups)
+                        <br>
+                        <b>NOTE: ALL these exercises pulls on your back, so pay CLOSE attention to your posture while
+                            doing these</b>
+                        <br>
+                        2-5 min rest in between
                         </p>
                     </li>
                     <li>
@@ -141,13 +156,14 @@
 
                         </p>
                     </li>
-                    
+
                 </ul>
 
             </section>
         </main>
 
         <footer style="text-align: center;">Enjoy your training</footer>
-      </section>
+    </section>
 </body>
+
 </html>
